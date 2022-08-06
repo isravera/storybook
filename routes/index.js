@@ -1,14 +1,14 @@
 const express = require('express')
 const router = express.Router()
 
-// @desc     Landing page
+// Landing page
 router.get('/', (req, res) => {
     res.render('login', {
         layout: 'login'
     })
 })
 
-// @desc     Dashboard
+// Dashboard
 router.get('/dashboard', (req, res) => {
     res.render('dashboard')
 })
