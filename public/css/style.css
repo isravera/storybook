@@ -1,3 +1,33 @@
 .login-container {
     width: 600px;
 }
+
+.socials-facebook {
+    background-color: #3B5898;
+    border-color: #3B5898;
+}
+
+.socials-facebook:hover {
+    background-color: #5177C2;
+    border-color: #5177C2;
+}
+
+.socials-twitter {
+    background-color: #00ABEE;
+    border-color: #00ABEE;
+}
+
+.socials-twitter:hover {
+    background-color: #4CBDE6;
+    border-color: #4CBDE6;
+}
+
+.socials-google {
+    background-color: #DD4C39;
+    border-color: #DD4C39;
+}
+
+.socials-google:hover {
+    background-color: #F06E60;
+    border-color: #F06E60;
+}
