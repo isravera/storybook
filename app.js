@@ -5,6 +5,7 @@ const {engine} = require('express-handlebars')
 const path = require('path')
 const passport = require('passport')
 const session = require('express-session')
+const MongoStore = require('connect-mongo')
 const connectDB = require('./config/db')
 
 dotenv.config({path: './config/config.env'})
@@ -28,7 +29,10 @@ app.set('views', './views')
 app.use(session({
     secret: 'koltuz',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    store: MongoStore.create({
+        mongoUrl: process.env.MONGO_URI
+    })
 }))
 
 // Passport Middleware
