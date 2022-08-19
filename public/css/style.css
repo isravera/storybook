@@ -2,6 +2,23 @@
     width: 600px;
 }
 
+.app-container {
+    margin-top: 100px;
+}
+
+.fixed-action-button {
+    position: fixed;
+    right: 0.6rem;
+    bottom: 0.9rem;
+    z-index: 1030;
+    padding: 0.9rem 20px 20px;
+    height: 80px;
+}
+
+.btn-floating {
+    border-radius: 50%;
+}
+
 .socials-facebook {
     background-color: #3B5898;
     border-color: #3B5898;

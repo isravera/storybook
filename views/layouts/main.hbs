@@ -14,10 +14,22 @@
 
     {{> _header}}
 
-    <div class="container">
+    <div class="container app-container">
         {{{body}}}
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor.create(document.querySelector('#body'), {
+            toolbar: {
+                items: [
+                    'bold', 'italic', 'strikethrough', 'underline', 'code', 'subscript', 'superscript', 'removeFormat', '|',
+                    'link', '|',
+                    'undo', 'redo',                    
+                ]
+            }
+        })
+    </script>
 </body>
 </html>

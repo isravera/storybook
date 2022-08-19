@@ -1,0 +1,39 @@
+<main class="mt-4">
+    <div class="pt-5">
+        <h2>Add Story</h2>
+        <hr>
+    </div>
+
+    <div class="row g-5">
+        <div class="col">
+            <form action="/stories" method="post" novalidate="">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+                            <label for="title">Title</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <select class="form-select" id="status" name="status" aria-label="status">
+                                <option value="public" selected>public</option>
+                                <option value="private">private</option>
+                            </select>
+                        <label for="status">Status</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <textarea placeholder="Tell Us Your Story" id="body" name="body"></textarea>
+                    </div>
+                </div>
+                <div class="row mt-3 g-2">
+                    <div class="col">
+                        <button type="submit" style="min-width: 123px" class="btn btn-success btn-form btn-lg"><i class="fa-solid fa-floppy-disk me-2"></i> Save</button>
+                        <a href="/dashboard" role="button" style="min-width: 123px" class="btn btn-danger btn-form btn-lg"><i class="fa-solid fa-ban me-2"></i> Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
