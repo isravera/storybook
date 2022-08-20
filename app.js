@@ -26,8 +26,17 @@ if(process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'))
 }
 
+// Handlebars helper
+const { formatDate, getStatusBadge, truncate } = require('./helpers/hbs')
+
 // View Engine: what will be responsable to render our pages
-app.engine('.hbs', engine({ defaultLayour: 'main', extname: '.hbs' }))
+app.engine('.hbs', engine({ helpers: {
+    formatDate, 
+    getStatusBadge,
+    truncate
+}, 
+defaultLayour: 'main', extname: '.hbs' }))
+
 app.set('view engine', '.hbs')
 app.set('views', './views')
 

@@ -1,0 +1,27 @@
+<h1>Stories</h1>
+<div class="row row-cols-1 row-cols-md-3 g4">
+    {{#each stories}}
+    
+    <div class="col mb-3">
+        <div class="card h-100 story-card">
+            <div class="card-up bg-secondary"></div>
+            <div class="avatar mx-auto">
+                <img src="{{{user.image}}}" referrerpolicy="no-referrer" alt="profile picture" class="rounded-circle img-fluid">
+            </div>
+            <div class="card-body">
+                <h5 class="text-center"><a href="/stories/user/{{user._id}}">{{user.displayName}}</a></h5>
+                <h6 class="text-center fw-light">{{title}}</h6>
+                <hr>
+                <div class="font-monospace mt-3">{{{truncate body 85}}}</div>
+                <p></p>
+            </div>
+            <div class="card-footer d-flex justify-content-center bg-white">
+                <a href="/stories/{{_id}}" class="btn btn-outline-secondary">Read More <i class="fa-solid fa-angles-right ms-2"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    {{else}}
+        <p>No stories to display</p>
+    {{/each}}
+</div>

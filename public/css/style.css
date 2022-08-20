@@ -6,6 +6,8 @@
     margin-top: 100px;
 }
 
+/* STORIES */
+
 .fixed-action-button {
     position: fixed;
     right: 0.6rem;
@@ -18,6 +20,22 @@
 .btn-floating {
     border-radius: 50%;
 }
+
+.story-card .card-up {
+    height: 120px;
+    overflow: hidden;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.story-card .avatar {
+    margin-top: -60px;
+    overflow: hidden;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+/* LOGIN */
 
 .socials-facebook {
     background-color: #3B5898;
